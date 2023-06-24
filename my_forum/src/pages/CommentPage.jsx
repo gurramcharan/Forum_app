@@ -48,7 +48,7 @@ export const CommentPage = () => {
                                                 <p>Replying to</p>
                                                 <p>@{itm.username}</p>
                                             </div>
-                                            <div className='flex-row'>
+                                            <div className='flex-row' style={{fontWeight:"600"}}>
                                                 <p>{com.comment}</p>
                                             </div>
                                             <div className='flex-row icons space-between'>
