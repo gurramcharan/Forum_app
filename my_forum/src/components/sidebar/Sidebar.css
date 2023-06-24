@@ -1,0 +1,17 @@
+.side-main-container{
+    display: flex;
+    flex-direction: column;
+    gap: 40rem;
+    width: 150px;
+}
+
+.side-link-container{
+    gap: 2rem;
+}
+
+.side-link{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    margin: 1rem;
+}
