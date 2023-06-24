@@ -12,3 +12,21 @@
   display: flex;
   flex-direction: column;
 }
+
+.gap{
+  gap:1rem;
+}
+
+.space-between{
+  justify-content: space-between;
+}
+
+.icons{
+  font-size: 22px;
+}
+
+.btn-no-style{
+  background-color: white;
+  border: none;
+  font-size: 20px;
+}

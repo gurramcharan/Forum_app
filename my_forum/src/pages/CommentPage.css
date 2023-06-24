@@ -1,0 +1,23 @@
+.comment-main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.comment-container{
+    display: flex;
+    justify-content: center;
+}
+
+.comment-post{
+    gap: 2rem;
+    box-shadow: 0 0 0.5rem rgba(0,0,0,0.1);
+    padding: 2rem;
+    width: 900px;
+
+}
+
+.comment-details{
+
+}

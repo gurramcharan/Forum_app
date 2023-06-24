@@ -17,29 +17,31 @@ export const CommentPage = () => {
     const {postData} = useContext(ForumContext)
     const singlePost = postData.filter((item) => item.postId === postId)
     return (
-        <div>
-            <div className='flex-row'>
-                <Link to="/"><BsArrowLeft/></Link>
-                <p>Posts</p>
+        <div className='comment-main-container'>
+            <div className='flex-row' style={{ justifyContent:"center", alignItems: "center", gap:"1rem", fontWeight:"600" }}>
+                <Link style={{fontSize:"26px"}} to="/"><BsArrowLeft/></Link>
+                <p style={{fontSize:"20px"}}>Posts</p>
             </div>
             <div>
                 <UserFeed posts={singlePost}/>
             </div>
-            <div className='feed-container'>
+            <div className='comment-container'>
+                
                 {singlePost.map((itm) => (
                     <div key={itm.postId}>
                         {itm
                             .comments
                             .map((com) => (
-                                <div key={com.commentId} className='feed-post'>
-                                    <div className='flex-row'>
+                                <div key={com.commentId} className=''>
+                                    <div className='flex-row comment-details comment-post'>
                                         <div>
                                             <img src={com.picUrl} alt="" width="50px"/>
                                         </div>
                                         <div >
-                                            <div className='flex-row'>
+                                            <div className='flex-row gap'>
                                                 <p>{com.name}</p>
                                                 <p>{com.username}</p>
+                                                <p>.</p>
                                                 <p><TimestampDisplay createdAt={com.createdAt}/></p>
                                             </div>
                                             <div className='flex-row'>
@@ -49,7 +51,7 @@ export const CommentPage = () => {
                                             <div className='flex-row'>
                                                 <p>{com.comment}</p>
                                             </div>
-                                            <div className='flex-row'>
+                                            <div className='flex-row icons space-between'>
                                                 <AiOutlineHeart/>
                                                 <GoComment/>
                                                 <FiShare/>

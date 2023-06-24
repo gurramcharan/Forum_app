@@ -17,12 +17,12 @@ export const UserFeed = ({posts}) => {
                 {posts.map((post) => (
                     <div key={post.postId} className='flex-row feed-post'>
                         <div>
-                            <button onClick={() => handleUpvote(post.postId)}><TbTriangleFilled/></button>
+                            <button className='btn-no-style' onClick={() => handleUpvote(post.postId)}><TbTriangleFilled/></button>
                             <p>{post.upvotes - post.downvotes}</p>
-                            <button onClick={() => handleDownvote(post.postId)}><TbTriangleInvertedFilled/></button>
+                            <button className='btn-no-style' onClick={() => handleDownvote(post.postId)}><TbTriangleInvertedFilled/></button>
                         </div>
                         <div>
-                            <div>
+                            <div className='flex-row gap'>
                                 <img src={post.picUrl} alt={post.name} width="50px"/>
                                 <p>Posted By</p>
                                 <p>@{post.username}</p>
@@ -31,11 +31,11 @@ export const UserFeed = ({posts}) => {
                             <div>
                                 <h1>{post.post}</h1>
                             </div>
-                            <div>
+                            <div className='flex-row gap'>
                                 {post
                                     .tags
                                     .map((tag) => (
-                                        <p key={tag}>{tag}</p>
+                                        <p className='feed-pills' key={tag}>{tag}</p>
                                     ))}
                             </div>
                             <div>
@@ -44,7 +44,7 @@ export const UserFeed = ({posts}) => {
                             <div>
                                 <hr/>
                             </div>
-                            <div className='flex-row'>
+                            <div className='flex-row space-between icons'>
                                 <p>
 
                                     <Link to={`/post/${post.postId}`}>
