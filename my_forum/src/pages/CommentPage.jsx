@@ -25,13 +25,13 @@ export const CommentPage = () => {
             <div>
                 <UserFeed posts={singlePost}/>
             </div>
-            <div>
+            <div className='feed-container'>
                 {singlePost.map((itm) => (
                     <div key={itm.postId}>
                         {itm
                             .comments
                             .map((com) => (
-                                <div key={com.commentId}>
+                                <div key={com.commentId} className='feed-post'>
                                     <div className='flex-row'>
                                         <div>
                                             <img src={com.picUrl} alt="" width="50px"/>
